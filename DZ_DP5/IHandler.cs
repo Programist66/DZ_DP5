@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace DZ_DP5
 {
-    internal interface IHandler
+    public interface IHandler
     {
-        bool Handle();
+        void Handle(Movie movie);
     }
 }

@@ -15,7 +15,21 @@ namespace DZ_DP5
             this.next = next;
         }
 
-        public abstract bool Handle();
+        public virtual void Handle(Movie movie) 
+        {
+            if (Check())
+            {
+                if (next == null)
+                {
+                    movie.Play();
+                }
+                else
+                {
+                    next.Handle(movie);
+                }
+            }
+        }
+        public abstract bool Check();
     }
     
 }

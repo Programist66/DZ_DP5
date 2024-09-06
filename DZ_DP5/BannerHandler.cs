@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace DZ_DP5
 {
-    internal class BannerHandler
+    internal class BannerHandler : BaseHandler
     {
+        public BannerHandler(IHandler next) : base(next)
+        {
+        }
 
+        public override bool Check()
+        {
+            Console.WriteLine("Нажмите любую клавишу чтобы закрыть баннер");
+            Console.ReadKey();
+            return true;
+        }
     }
 }

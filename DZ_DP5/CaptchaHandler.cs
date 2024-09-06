@@ -12,14 +12,17 @@ namespace DZ_DP5
         {
         }
 
-        public override bool Handle()
+        public override bool Check()
         {
-            Console.Write("Вы человек?[Y] - да \n[N] - нет\n: ");
+            Console.Write("Введите текст `AFD`: ");
             string choise = Console.ReadLine();
-            if (choise == "Y")
+
+            if (choise != "AFD") 
             {
-                return next.Handle();
+                Console.WriteLine("Вы не прошли проверку!!!");
+                return false;
             }
+            return true;
         }
     }
 }

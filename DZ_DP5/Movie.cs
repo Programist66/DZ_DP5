@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DZ_DP5
 {
-    internal class Movie : IMovie
+    public class Movie : IMovie
     {
         public void Play()
         {

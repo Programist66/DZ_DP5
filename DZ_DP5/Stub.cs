@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace DZ_DP5
 {
-    internal class Stub : IMovie
+    public class Stub : IMovie
     {
         private IHandler handler;
-        private IMovie movie;
+        private Movie movie;
 
-        Stub (IHandler handler, IMovie movie)
+        public Stub (IHandler handler, Movie movie)
         {
             this.handler = handler;
             this.movie = movie;
@@ -19,10 +19,7 @@ namespace DZ_DP5
 
         public void Play()
         {
-            if (handler.Handle())
-            {
-                movie.Play();
-            }
+            handler.Handle(movie);
         }
     }
 }
